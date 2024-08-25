@@ -9,8 +9,8 @@
 - [Структура и Именование](#structure-and-naming)
 - [Оформление кода](#code-style)
   - [Советы по оформлению кода](#code-style-check)
+    - [Структура react component](#react-component-structure)
   - [Обеспечение определенного стиля кода](#enforcing-code-style-standards)
-- [Логирование](#logging)
 - [API](#api)
   - [Дизайн API](#api-design)
   - [Безопасность API](#api-security)
@@ -197,6 +197,8 @@
 <a name="enforcing-code-style-standards"></a>
 
 ### 3.2 Обеспечение определенного стиля кода в react app
+
+<a name="react-component-structure"></a>
 
 #### 3.2.1 Структура React component
 
