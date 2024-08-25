@@ -198,6 +198,49 @@
 
 ### 3.2 Обеспечение определенного стиля кода в react app
 
+#### 3.2.1 Структура React component
+
+  - third party libs
+  - ui components
+  - local components, use alias for import component e.g `src/widgets/component`
+  - utils, use alias for import e.g `src/shared/themes/colors`
+  - styles
+  - render component
+   
+  ```jsx
+
+import React from 'react'
+import cn from 'classnames'
+
+import { Box, Button } from "@mui/material";
+
+import LocalComponent from 'src/widgets'
+
+import './Card.scss'
+
+interface CardProps {
+  title: string,
+  description: string
+  className?: string
+}
+
+const Card = ({ title, description, className }: CardProps) => {
+  return (
+    <Box className={'card', className}>
+      <Typography>{title}</Typography>
+      <Typography>{description}</Typography>
+    </Box>
+  )
+}
+
+export default Card;
+
+```
+  
+  > third-party-libs
+  > ui lib
+  > типы для компонентов создаются внутри компоненты с окончанием Props e.g `interface UserCardProps {}`
+
 ### 3.3 Обеспечение определенного стиля кода в styles
 
 
