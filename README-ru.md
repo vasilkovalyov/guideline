@@ -221,18 +221,18 @@ import LocalComponent from 'src/widgets'
 import './Card.scss'
 
 interface CardProps {
-  title: string,
-  description: string
-  className?: string
+    title: string,
+    description: string
+    className?: string
 }
 
 const Card = ({ title, description, className }: CardProps) => {
-  return (
-    <Box className={'card', className}>
-      <Typography>{title}</Typography>
-      <Typography>{description}</Typography>
-    </Box>
-  )
+    return (
+      <Box className={'card', className}>
+        <Typography>{title}</Typography>
+        <Typography>{description}</Typography>
+      </Box>
+    )
 }
 
 export default Card;
