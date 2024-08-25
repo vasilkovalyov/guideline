@@ -78,8 +78,8 @@
   |   └── feature1
   |   └── feature2
   ├── hooks - кастомные хуки
-  |   └── hook1
-  |   └── hook2
+  |   └── useHook1
+  |   └── useHook2
   ├── i18n - локализация для проекта
   |   └── locales
   |       └── en
@@ -110,6 +110,38 @@
   |   └── widget1
   |   └── widget2
   ```
+
+- Именование для pages
+
+  ```
+  .
+  ├── pages
+  |   └── home
+  |       └── index.ts
+  |       └── Home.tsx
+  |   └── create-course
+  |       └── index.ts
+  |       └── CreateCourse.tsx
+  ```
+  
+- Именование для hooks
+
+  ```
+  .
+  ├── hooks
+  |   └── useHook.tsx
+  ```
+  
+- Именование для components, features, widgets
+
+  ```
+  .
+  ├── [folder]
+  |   └── component-name
+  |       └── index.ts
+  |       └── componentName.tsx
+  ```
+  
 
 - Структурируйте ваши файлы вокруг продуктовых функций / страниц / компонентов, а не ролей. Также размещайте файлы с тестами рядом с файлами, к которым они относятся.
 
