@@ -1,9 +1,3 @@
-[中文版](./README-zh.md)
-| [日本語版](./README-ja.md)
-| [한국어](./README-ko.md)
-| [English](./README.md)
-| [Português](./README-pt-BR.md)
-
 # Советы по созданию проектов &middot; [![ПРы приветствуются](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 > Тогда как для некоторых разработка нового проекта - это прогулка по парку, то для других поддержка этого проекта - полнейший кошмар.
