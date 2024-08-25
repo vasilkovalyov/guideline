@@ -202,6 +202,12 @@
 
 #### 3.2.1 Структура React component
 
+  - каждый компонент должен находится в папке, так же там должен быть index.ts файл откуда будут экспортироваться компоненты, типы и
+    т.д для работы извне, ничего лишнего не стоит экспортировать
+  - пример index.ts файла
+
+    ```jsx
+
   - third party libs
   - ui components
   - local components, use alias for import component e.g `src/widgets/component`
@@ -211,6 +217,9 @@
   - render component
    
 ```jsx
+export { default as Card } from './Card.tsx'
+```
+
 import React from 'react'
 import cn from 'classnames'
 
