@@ -64,6 +64,53 @@
 
 ![Структура и Именование](/images/folder-tree.png)
 
+```
+  .
+  ├── app
+  |   └── api
+  |   └── routing
+  |   └── store - общий store для приложения
+  ├── entities
+  |   └── entity1
+  |       └── api
+  |       └── model
+  ├── features
+  |   └── feature1
+  |   └── feature2
+  ├── hooks - кастомные хуки
+  |   └── hook1
+  |   └── hook2
+  ├── i18n - локализация для проекта
+  |   └── locales
+  |       └── en
+  |       └── uk
+  ├── layouts - шаблоны для страниц, как правило может быть для public pages, private pages
+  |   └── PrivateLayout
+  |   └── PublicLayout2
+  ├── pages
+  |   └── Page1
+  |   └── Page2
+  ├── shared
+  |   └── api
+  |   └── config
+  |   └── themes
+  ├── styles
+  |   └── components
+  |       └── component1
+  |       └── component2
+  |   └── sections
+  |       └── section1
+  |       └── section2
+  |   └── base.scss - общие базовые стили
+  |   └── breakpoints.scss - переменные для медиазапросов
+  |   └── fonts.scss - для подключение шрифтов
+  |   └── main.scss - собирает все scss файлы для общей компиляции
+  |   └── variables.scss - переменные которые используются по всему проекту
+  ├── widgets - 
+  |   └── widget1
+  |   └── widget2
+  ```
+
 - Структурируйте ваши файлы вокруг продуктовых функций / страниц / компонентов, а не ролей. Также размещайте файлы с тестами рядом с файлами, к которым они относятся.
 
   **Плохо**
