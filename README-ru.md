@@ -3,8 +3,7 @@
 <hr>
 
 - [Git](#git)
-  - [Правила работы с Git](#some-git-rules)
-  - [Рабочий процесс в Git](#git-workflow)
+  - [Правила работы с Git](#some-git-rules) 
   - [Пишем хорошее сообщение коммита](#writing-good-commit-messages)
 - [Структура и Именование](#structure-and-naming)
 - [Оформление кода](#code-style)
