@@ -272,7 +272,7 @@ const SectionAbout = () => {
     )
 }
 
-export default Card;
+export default SectionAbout;
 ```
 
 ### 3.3 Обеспечение определенного стиля кода в styles
