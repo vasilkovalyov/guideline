@@ -206,7 +206,9 @@
     т.д для работы извне, ничего лишнего не стоит экспортировать
   - пример index.ts файла
 
-    ```jsx
+```jsx
+export { default as Card } from './Card.tsx'
+```
 
   - third party libs
   - ui components
@@ -215,11 +217,7 @@
   - styles
   - types, interfaces типы для компонентов создаются внутри компоненты с окончанием Props e.g `interface CardProps {}`
   - render component
-   
-```jsx
-export { default as Card } from './Card.tsx'
-```
-
+  
 
 ```jsx
 import React from 'react'
