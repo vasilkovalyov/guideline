@@ -10,6 +10,7 @@
 - [Оформление кода](#code-style)
   - [Советы по оформлению кода](#code-style-check)
     - [Структура react component](#react-component-structure)
+    - [Markup struct for section(block)](#markup-struct-for-section)
   - [Обеспечение определенного стиля кода](#enforcing-code-style-standards)
 - [API](#api)
   - [Дизайн API](#api-design)
@@ -246,8 +247,33 @@ const Card = ({ title, description, className }: CardProps) => {
 
 export default Card;
 ```
-  
-  
+
+<a name="markup-struct-for-section"></a>
+
+#### 3.2.2 Markup struct for section(block)
+
+- название секции должно начинаться с Section
+
+```jsx
+import React from 'react'
+
+import { Box, Container } from "@mui/material";
+
+import './SectionAbout.scss'
+
+
+const SectionAbout = () => {
+    return (
+      <Box component="section" className="section-about">
+        <Container>
+          /* content */
+        </Container>
+      </Box>
+    )
+}
+
+export default Card;
+```
 
 ### 3.3 Обеспечение определенного стиля кода в styles
 
