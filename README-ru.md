@@ -290,13 +290,13 @@ export default SectionAbout;
 
 - стили пишутся по BEM
 
-  ``
+```
   .card { // block
     &--active {} // modificator
     &__title {} // element
     &__description {} // element
   }
-  ``
+```
 
 ### 3.3 Обеспечение определенного стиля кода в styles
 
