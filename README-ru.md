@@ -242,16 +242,16 @@ const Card: FC<LandingHeroSectionProps> = ({
 export default Card;
 ```
 
-- in mui components you have you write values in `px` e.g
+- in mui components you have you write values only in `px` e.g
 
 **Bad**  
 ```jsx
-<Box pt="40px"></Box>
+<Box pt={5}></Box>
 ```
 
 **Good**
 ```jsx
-<Box pt={5}></Box>
+<Box pt="40px"></Box>
 ```
   
 - you have to write styles insde folder with the components or inside `styles` folder or on the ui components
