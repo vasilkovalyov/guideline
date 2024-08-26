@@ -242,6 +242,18 @@ const Card: FC<LandingHeroSectionProps> = ({
 export default Card;
 ```
 
+- in mui components you have you write values in `px` e.g
+
+**Bad**  
+```jsx
+<Box pt="40px"></Box>
+```
+
+**Good**
+```jsx
+<Box pt={5}></Box>
+```
+  
 - you have to write styles insde folder with the components or inside `styles` folder or on the ui components
 - if you put style attributes for ui components you need to limit them till 4 or 5 attributes, otherwise it will looks cumbersome and you should put styles into `.scss` file
 - styles for Grid, Stack, List components can use more that 4,5 attributes, however thay should be for styles `flex, padding, margin` otherwise you have to create separate `.scss` file for the component and write styles there
@@ -318,5 +330,8 @@ export default SectionAbout;
       background-color: rgb(var(--primary-color));
     }
   ```
+
+- line-height you have to write in `em` e.g `line-height: 1.2;`
+- we use mobile first responsive
 
 
