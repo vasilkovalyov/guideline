@@ -298,6 +298,34 @@ export default SectionAbout;
   }
 ```
 
+- важно писать цвета как var переменные
+
+  ```
+    .card {
+      background-color: rgb(var(--primary-color));
+    }
+  ```
+  
+- для медиазапросов в рядом с tsx компонентами нужно использовать переменные таким образом
+
+  ```
+    @use "styles/breakpoints.scss" as breakpoints;
+   
+    .card {
+      background-color: rgb(var(--primary-color));
+    }
+  ```
+  
+- для медиазапросов в файлах папки `styles` нужно использовать переменные таким образом
+
+  ```
+    @use "path-to-file/breakpoints.scss" as breakpoints;
+   
+    .card {
+      background-color: rgb(var(--primary-color));
+    }
+  ```
+
 ### 3.3 Обеспечение определенного стиля кода в styles
 
 
