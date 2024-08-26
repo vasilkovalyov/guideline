@@ -1,14 +1,14 @@
-# Советы по созданию проектов &middot; [![ПРы приветствуются](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+# Tips for creating projects &middot; [![ПРы приветствуются](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 <hr>
 
 - [Git](#git)
-  - [Правила работы с Git](#some-git-rules) 
-  - [Пишем хорошее сообщение коммита](#writing-good-commit-messages)
-- [Структура и Именование](#structure-and-naming)
-- [Оформление кода](#code-style)
-  - [Советы по оформлению кода](#code-style-check)
-    - [Структура react component](#react-component-structure)
+  - [Rules for working with Git](#some-git-rules) 
+  - [Writing a good commit message](#writing-good-commit-messages)
+- [Structure and Naming](#structure-and-naming)
+- [Code design](#code-design)
+  - [Code Formatting Tips](#code-formatting-tips)
+    - [React component structure](#react-component-structure)
     - [Markup struct for section(block)](#markup-struct-for-section)
     - [Styles](#styles)
   
@@ -22,41 +22,42 @@
 
 <a name="some-git-rules"></a>
 
-### 1.1 Правила работы с Git
+### 1.1 Rules for working with Git
 
-Набор правил, которые следует иметь ввиду:
+A set of rules to keep in mind:
 
-- Откалывайте ветку от `main`
+- Created branch from `main`
 
-- Разрабатывайте в `feature/*` ветке.
-- Фиксите в `fix/*` ветке.
-- Рефакторите в `refactoring/*` ветке.
+- Develop in `feature/*` branch.
+- Fix issues in `fix/*` branch.
+- Refactoring in `refactoring/*` branch.
 
 
-- Никогда не выкладывайте (push) коммиты напрямую в  `main` ветку. Создавайте Запрос на Слияние (Pull Request).
+- Never push commits into  `main` branch directly. Make Pull Request.
 
-- Обновляйте вашу локальную `main` ветку и делайте "rebase" перед тем как делать "push" своих изменений перед созданием pull request.
+- Update your local `main` branch and do an interactive rebase before pushing your feature and making a Pull Request
 
-- Перед созданием "Pull Request" убедитесь, что ваша `feature/*` || `fix/*` || `refactoring/*` ветка успешно собирается и все тесты проходят успешно, включая проверки на оформление кода.
+- Before making a Pull Request, make sure your branch builds successfully and passes all tests (including code style checks).
 
 
 <a name="writing-good-commit-messages"></a>
 
-### 1.2 Пишем хорошее сообщение коммита
+### 1.2 Writing a good commit message
 
-Хороший гайдлайн по создании коммитов и следование ему облегчит работу с Git и сотрудничество с другими разработчиками. Вот несколько правил большого пальца ([источник](https://chris.beams.io/posts/git-commit/#seven-rules)):
+Having a good guideline for creating commits and sticking to it makes working with Git and collaborating with others a lot easier. Here are some rules of thumb (source): ([источник](https://chris.beams.io/posts/git-commit/#seven-rules)):
 
-- Начните краткое описание с заглавной буквы.
+- Capitalize the subject line.
 
-- Не заканчивайте краткое описание точкой.
+- Do not end the subject line with a period.
 
-- Используйте основное описание, чтобы объяснить **что** и **почему** вместо **как**.
+- Use imperative mood in the subject line.
+
 
 <a name="structure-and-naming"></a>
 
-## 2. Структура и Именование
+## 2. Structure and Naming
 
-![Структура и Именование](/images/folder-tree.png)
+![Structure and Naming](/images/folder-tree.png)
 
 ```
   .
@@ -169,15 +170,15 @@
 
 
 
-<a name="code-style"></a>
+<a name="code-design"></a>
 
-## 3. Оформление кода
+## 3. Code design
 
 ![Оформление кода](/images/code-style.png)
 
-<a name="code-style-check"></a>
+<a name="code-formatting-tips"></a>
 
-### 3.1 Советы по оформлению кода
+### 3.1 Code Formatting Tips
 
 - Используйте `.eslintignore`, чтобы исключить файлы и папки из проверки на оформление кода.
 
@@ -194,7 +195,7 @@
 
 <a name="react-component-structure"></a>
 
-#### 3.2.1 Структура React component
+#### 3.2.1 React component structure
 
   - каждый компонент должен находится в папке, так же там должен быть index.ts файл откуда будут экспортироваться компоненты, типы и
     т.д для работы извне, ничего лишнего не стоит экспортировать
