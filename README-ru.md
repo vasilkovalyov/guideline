@@ -220,6 +220,8 @@
 export { default as Card } from './Card.tsx'
 ```
 
+
+```jsx
 import React from 'react'
 import cn from 'classnames'
 
