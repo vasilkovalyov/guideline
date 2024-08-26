@@ -8,6 +8,7 @@
 - [Structure and Naming](#structure-and-naming)
 - [Code design](#code-design)
   - [Code Formatting Tips](#code-formatting-tips)
+  - [Enforcing code style standards](#enforcing-code-style-standards)
     - [React component structure](#react-component-structure)
     - [Markup struct for section(block)](#markup-struct-for-section)
     - [Styles](#styles)
@@ -169,7 +170,6 @@ Having a good guideline for creating commits and sticking to it makes working wi
   > Instead of a long list of files, you will create small modules that encapsulate one responsibility including its test and so on. It gets much easier to navigate through and things can be found at a glance.
 
 
-
 <a name="code-design"></a>
 
 ## 3. Code design
@@ -191,7 +191,7 @@ Having a good guideline for creating commits and sticking to it makes working wi
 
 <a name="enforcing-code-style-standards"></a>
 
-### 3.2 Обеспечение определенного стиля кода в react app
+### 3.2 Enforcing code style standards
 
 <a name="react-component-structure"></a>
 
