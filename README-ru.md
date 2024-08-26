@@ -14,7 +14,6 @@
     - [Styles](#styles)
   
 
-
 <a name="git"></a>
 
 ## 1. Git
@@ -197,9 +196,8 @@ Having a good guideline for creating commits and sticking to it makes working wi
 
 #### 3.2.1 React component structure
 
-  - каждый компонент должен находится в папке, так же там должен быть index.ts файл откуда будут экспортироваться компоненты, типы и
-    т.д для работы извне, ничего лишнего не стоит экспортировать
-  - пример index.ts файла
+  - every single component should has a folder itself, there is should be `index.ts` where you can export component, types etc for work outside of the folder, you shouldn`t export useless files or types.
+  - expample `index.ts`
 
 ```jsx
 export { default as Card } from './Card.tsx'
@@ -210,7 +208,7 @@ export { default as Card } from './Card.tsx'
   - local components, use alias for import component e.g `src/widgets/component`
   - utils, use alias for import e.g `src/shared/themes/colors`
   - styles
-  - types, interfaces типы для компонентов создаются внутри компоненты с окончанием Props e.g `interface CardProps {}`
+  - types, interfaces - types for component create with ending - `Props` e.g `interface CardProps {}`
   - render component
   
 
@@ -244,9 +242,11 @@ const Card: FC<LandingHeroSectionProps> = ({
 export default Card;
 ```
 
-- стили должны писаться или в scss или в на самих ui компонентах, если стилевых атрибов больше чем 4 или 5 и это выглядит громоздко то лучше перенести стили в .scss файл
-- стили для Grid компонентов могут быть чуть больше чем 4 или 5 атрибутов, но стили должны быть для свойств flex, margin, padding, для более сложных стилей лучше создать класс и перенести стили в отдельный файл
-- если есть практические одинаковые компоненты, секции по своему внешнему виду но возможно с чуть разной структурой лучше выносить стили в папку `styles/section` или `styles/component`
+- you have to write styles insde folder with the components or inside `styles` folder or on the ui components
+- if you put style attributes for ui components you need to limit them till 4 or 5 attributes, otherwise it will looks cumbersome and you should put styles into `.scss` file
+- styles for Grid, Stack, List components can use more that 4,5 attributes, however thay should be for styles `flex, padding, margin` otherwise you have to create separate `.scss` file for the component and write styles there
+- if you have almost similar components, or sections that looks same with different structure you can try to create `.scss` file for the component and put it into `styles/components` or `styles/sections` and don't forget import file into  `index.scss` for folder it exist for
+
   
 
 
