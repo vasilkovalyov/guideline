@@ -64,7 +64,7 @@ Having a good guideline for creating commits and sticking to it makes working wi
   ├── app
   |   └── api
   |   └── routing
-  |   └── store - общий store для приложения
+  |   └── store - base store for the app
   ├── entities
   |   └── entity1
   |       └── api
@@ -72,14 +72,14 @@ Having a good guideline for creating commits and sticking to it makes working wi
   ├── features
   |   └── feature1
   |   └── feature2
-  ├── hooks - кастомные хуки
+  ├── hooks - custom hooks
   |   └── useHook1
   |   └── useHook2
-  ├── i18n - локализация для проекта
+  ├── i18n - localization for the projects
   |   └── locales
   |       └── en
   |       └── uk
-  ├── layouts - шаблоны для страниц, как правило может быть для public pages, private pages
+  ├── layouts - layouts for pages can have unique header, footer, as a rule there are public, private type of layouts
   |   └── PrivateLayout
   |   └── PublicLayout2
   ├── pages
@@ -96,18 +96,18 @@ Having a good guideline for creating commits and sticking to it makes working wi
   |   └── sections
   |       └── section1
   |       └── section2
-  |   └── base.scss - общие базовые стили
-  |   └── breakpoints.scss - переменные для медиазапросов
-  |   └── fonts.scss - для подключение шрифтов
-  |   └── main.scss - собирает все scss файлы для общей компиляции
-  |   └── variables.scss - переменные которые используются по всему проекту
+  |   └── base.scss - common base styles
+  |   └── breakpoints.scss - variable only for breakpoints
+  |   └── fonts.scss - for import fonts
+  |   └── main.scss - consist of styles (components, section, etc) except for variables
+  |   └── variables.scss - variable that use in entire app
   ├── widgets - 
   |   └── widget1
   |   └── widget2
   ```
 
 
-- Структурируйте ваши файлы вокруг продуктовых функций / страниц / компонентов, а не ролей. Также размещайте файлы с тестами рядом с файлами, к которым они относятся.
+- How you have to create components
 
   **Bad**
 
@@ -133,7 +133,7 @@ Having a good guideline for creating commits and sticking to it makes working wi
   ```
 
 
-- Именование для pages
+- Naming for pages
 
   ```
   .
@@ -146,7 +146,7 @@ Having a good guideline for creating commits and sticking to it makes working wi
   |       └── CreateCourse.tsx
   ```
   
-- Именование для hooks
+- Naming for hooks
 
   ```
   .
@@ -154,7 +154,7 @@ Having a good guideline for creating commits and sticking to it makes working wi
   |   └── useHook.tsx
   ```
   
-- Именование для components, features, widgets
+- Naming for components, features, widgets
 
   ```
   .
@@ -166,7 +166,7 @@ Having a good guideline for creating commits and sticking to it makes working wi
 
   _Why:_
 
-  > Вместо длинных списков файлов вы получите небольшие модули, которые инкапсулируют только одну обязанность и включают в себя  связанные файлы. Навигация в проекте станет гораздо легче, так как нужные файлы будут находиться рядом, сгруппированные по модулям.
+  > Instead of a long list of files, you will create small modules that encapsulate one responsibility including its test and so on. It gets much easier to navigate through and things can be found at a glance.
 
 
 
@@ -174,19 +174,19 @@ Having a good guideline for creating commits and sticking to it makes working wi
 
 ## 3. Code design
 
-![Оформление кода](/images/code-style.png)
+![Code design](/images/code-style.png)
 
 <a name="code-formatting-tips"></a>
 
 ### 3.1 Code Formatting Tips
 
-- Используйте `.eslintignore`, чтобы исключить файлы и папки из проверки на оформление кода.
+- Use `.eslintignore` to exclude files or folders from code style checks.
 
-- Избегайте неуместных и шуточных комментариев, логов и наименований.
+- Avoid irrelevant or funny comments, logs or naming.
 
-- Используйте имена со смыслом, не сокращайте их, чтобы потом было легко их искать. Для функций используйте длинные и наглядные имена. Имя функции должно быть глаголом или глагольной фразой, и должно сообщать нам что делает функция.
+- Make your names search-able with meaningful distinctions avoid shortened names. For functions use long, descriptive names. A function name should be a verb or a verb phrase, and it needs to communicate its intention.
 
-- Располагайте функции в файле в соответствии с правилом понижения (step-down rule). Сложные составные функции располагаются в начале файла, а затем идут простые функции.
+- Organize your functions in a file according to the step-down rule. Higher level functions should be on top and lower levels below.
 
 
 <a name="enforcing-code-style-standards"></a>
