@@ -11,6 +11,7 @@
   - [Советы по оформлению кода](#code-style-check)
     - [Структура react component](#react-component-structure)
     - [Markup struct for section(block)](#markup-struct-for-section)
+    - [Styles](#styles)
   - [Обеспечение определенного стиля кода](#enforcing-code-style-standards)
 - [API](#api)
   - [Дизайн API](#api-design)
@@ -115,7 +116,7 @@
 
 - Структурируйте ваши файлы вокруг продуктовых функций / страниц / компонентов, а не ролей. Также размещайте файлы с тестами рядом с файлами, к которым они относятся.
 
-  **Плохо**
+  **Bad**
 
   ```
   .
@@ -125,7 +126,7 @@
   |   └── banner.tsx
   ```
 
-  **Хорошо**
+  **Good**
 
   ```
   .
@@ -170,7 +171,7 @@
   |       └── componentName.tsx
   ```
 
-  _Почему:_
+  _Why:_
 
   > Вместо длинных списков файлов вы получите небольшие модули, которые инкапсулируют только одну обязанность и включают в себя  связанные файлы. Навигация в проекте станет гораздо легче, так как нужные файлы будут находиться рядом, сгруппированные по модулям.
 
@@ -240,21 +241,21 @@ const Card: FC<LandingHeroSectionProps> = ({
   title, description, className
 }) => {
     return (
-      <Box className={'card', className}>
-        <Typography>{title}</Typography>
-        <Typography>{description}</Typography>
+      <Box className={"card", className}>
+        <Typography className="card__title">{title}</Typography>
+        <Typography className="card__description">{description}</Typography>
       </Box>
     )
 }
 
 export default Card;
 ```
+
 - стили должны писаться или в scss или в на самих ui компонентах, если стилевых атрибов больше чем 4 или 5 и это выглядит громоздко то лучше перенести стили в .scss файл
 - стили для Grid компонентов могут быть чуть больше чем 4 или 5 атрибутов, но стили должны быть для свойств flex, margin, padding, для более сложных стилей лучше создать класс и перенести стили в отдельный файл
 - если есть практические одинаковые компоненты, секции по своему внешнему виду но возможно с чуть разной структурой лучше выносить стили в папку `styles/section` или `styles/component`
   
 
-  
 
 <a name="markup-struct-for-section"></a>
 
@@ -283,7 +284,19 @@ const SectionAbout = () => {
 export default SectionAbout;
 ```
 
+<a name="styles"></a>
 
+#### 3.2.3 Styles
+
+- стили пишутся по BEM
+
+  ``
+  .card { // block
+    &--active {} // modificator
+    &__title {} // element
+    &__description {} // element
+  }
+  ``
 
 ### 3.3 Обеспечение определенного стиля кода в styles
 
