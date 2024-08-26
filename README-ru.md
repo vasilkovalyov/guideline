@@ -333,5 +333,14 @@ export default SectionAbout;
 
 - line-height you have to write in `em` e.g `line-height: 1.2;`
 - we use mobile first responsive
-
+  
+- for transition you have to use mixin `animate`
+  
+```
+    @use "path-to-file/mixins.scss" as mixins;
+   
+    .card {
+      @include animate(background-color color) 
+    }
+```
 
