@@ -12,12 +12,8 @@
     - [Структура react component](#react-component-structure)
     - [Markup struct for section(block)](#markup-struct-for-section)
     - [Styles](#styles)
-  - [Обеспечение определенного стиля кода](#enforcing-code-style-standards)
-- [API](#api)
-  - [Дизайн API](#api-design)
-  - [Безопасность API](#api-security)
-  - [Документация API](#api-documentation)
-- [Лицензирование](#licensing)
+  
+
 
 <a name="git"></a>
 
@@ -326,6 +322,6 @@ export default SectionAbout;
     }
   ```
 
-### 3.3 Обеспечение определенного стиля кода в styles
+
 
 
