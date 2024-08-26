@@ -254,7 +254,7 @@ export default Card;
 
 #### 3.2.2 Markup struct for section(block)
 
-- название секции должно начинаться с Section
+- naming of section should start with `Section`
 
 ```jsx
 import React from 'react'
@@ -281,7 +281,7 @@ export default SectionAbout;
 
 #### 3.2.3 Styles
 
-- стили пишутся по BEM
+- we use BEM for classnames
 
 ```
   .card { // block
@@ -291,7 +291,7 @@ export default SectionAbout;
   }
 ```
 
-- важно писать цвета как var переменные
+- it is essential write variable for colors
 
   ```
     .card {
@@ -299,7 +299,7 @@ export default SectionAbout;
     }
   ```
   
-- для медиазапросов в рядом с tsx компонентами нужно использовать переменные таким образом
+- breakpoints inside the component folders inside `.scss` files you have to write like that
 
   ```
     @use "styles/breakpoints.scss" as breakpoints;
@@ -309,7 +309,7 @@ export default SectionAbout;
     }
   ```
   
-- для медиазапросов в файлах папки `styles` нужно использовать переменные таким образом
+- breakpoints inside `styles` you have to write like that
 
   ```
     @use "path-to-file/breakpoints.scss" as breakpoints;
@@ -318,7 +318,5 @@ export default SectionAbout;
       background-color: rgb(var(--primary-color));
     }
   ```
-
-
 
 
