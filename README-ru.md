@@ -337,10 +337,34 @@ export default SectionAbout;
 - for transition you have to use mixin `animate`
   
 ```
-    @use "path-to-file/mixins.scss" as mixins;
+    @use "path-to-file/mixins.scss" as mixins
    
     .card {
       @include animate(background-color color) 
+    }
+```
+
+- for media query you have to use mixin `media`
+  
+```
+    @use "path-to-file/mixins.scss" as mixins
+   
+    .card {
+      @include mixins.media(tablet) {
+        border: none;
+      }
+    }
+```
+
+- for hover effect you have to use mixin `hover` it works only for screen without touch
+  
+```
+    @use "path-to-file/mixins.scss" as mixins
+   
+    .card {
+      @include mixins.hover {
+        border: none;
+      }
     }
 ```
 
