@@ -221,7 +221,7 @@ export { default as Card } from './Card.tsx'
   
 
 ```jsx
-import React from 'react'
+import { FC } from "react";
 import cn from 'classnames'
 
 import { Box, Button } from "@mui/material";
@@ -236,7 +236,9 @@ interface CardProps {
     className?: string
 }
 
-const Card = ({ title, description, className }: CardProps) => {
+const Card: FC<LandingHeroSectionProps> = ({
+  title, description, className
+}) => {
     return (
       <Box className={'card', className}>
         <Typography>{title}</Typography>
@@ -247,6 +249,12 @@ const Card = ({ title, description, className }: CardProps) => {
 
 export default Card;
 ```
+- стили должны писаться или в scss или в на самих ui компонентах, если стилевых атрибов больше чем 4 или 5 и это выглядит громоздко то лучше перенести стили в .scss файл
+- стили для Grid компонентов могут быть чуть больше чем 4 или 5 атрибутов, но стили должны быть для свойств flex, margin, padding, для более сложных стилей лучше создать класс и перенести стили в отдельный файл
+- если есть практические одинаковые компоненты, секции по своему внешнему виду но возможно с чуть разной структурой лучше выносить стили в папку `styles/section` или `styles/component`
+  
+
+  
 
 <a name="markup-struct-for-section"></a>
 
@@ -274,6 +282,8 @@ const SectionAbout = () => {
 
 export default SectionAbout;
 ```
+
+
 
 ### 3.3 Обеспечение определенного стиля кода в styles
 
