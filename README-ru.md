@@ -18,7 +18,6 @@
 
 ## 1. Git
 
-![Git](/images/branching.png)
 
 <a name="some-git-rules"></a>
 
@@ -57,7 +56,6 @@ Having a good guideline for creating commits and sticking to it makes working wi
 
 ## 2. Structure and Naming
 
-![Structure and Naming](/images/folder-tree.png)
 
 ```
   .
@@ -173,7 +171,6 @@ Having a good guideline for creating commits and sticking to it makes working wi
 
 ## 3. Code design
 
-![Code design](/images/code-style.png)
 
 <a name="code-formatting-tips"></a>
 
